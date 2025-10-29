@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quetes/core/utils/app_colors.dart';
+import 'package:quetes/core/utils/app_strings.dart';
 
 ThemeData appTheme() {
   return ThemeData(
@@ -7,6 +8,7 @@ ThemeData appTheme() {
     primaryColor: AppColors.primary,
     hintColor: AppColors.hint,
     brightness: Brightness.light,
+    fontFamily: AppStrings.fontFamily,
     scaffoldBackgroundColor: Colors.white,
     textTheme: const TextTheme(
       button: TextStyle(
