@@ -3,6 +3,8 @@ import 'package:quetes/core/utils/app_strings.dart';
 import 'package:quetes/core/utils/hex_color.dart';
 import 'package:quetes/features/random_quote/presentation/screens/quote_screen.dart';
 
+import 'config/themes/app_theme.dart';
+
 class QuoteApp extends StatelessWidget {
   const QuoteApp({super.key});
 
@@ -11,10 +13,7 @@ class QuoteApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
-      theme: ThemeData(
-       primaryColor: HexColor('#451BAB'),
-        useMaterial3: true,
-      ),
+      theme: appTheme(),
       home: const QuoteScreen(),
     );
   }
