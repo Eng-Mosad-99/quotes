@@ -15,9 +15,10 @@ class QuoteScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             InkWell(
-              onTap: () => Constants.showErrorDialog(
+              onTap: () => Constants.showToast(
                 context: context,
                 msg: 'Quote Error',
+                color: Colors.red,
               ),
               child: Image.asset(
                 ImgAssets.logo,

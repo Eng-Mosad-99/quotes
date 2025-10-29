@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:quetes/core/utils/app_colors.dart';
 
 class Constants {
   static void showErrorDialog({
@@ -32,6 +34,20 @@ class Constants {
           ],
         );
       },
+    );
+  }
+
+  static void showToast({
+    required BuildContext context,
+    required String msg,
+    Color? color,
+    ToastGravity? gravity,
+  }) {
+    Fluttertoast.showToast(
+      msg: msg,
+      toastLength: Toast.LENGTH_LONG,
+      backgroundColor: color ?? AppColors.primary,
+      gravity: gravity ?? ToastGravity.BOTTOM,
     );
   }
 }
