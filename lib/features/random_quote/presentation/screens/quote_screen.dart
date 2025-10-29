@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quetes/config/routes/app_routes.dart';
 import 'package:quetes/core/utils/constants.dart';
 import 'package:quetes/core/utils/image_manager.dart';
+import 'package:quetes/core/utils/media_query_values.dart';
 
 class QuoteScreen extends StatelessWidget {
   const QuoteScreen({super.key});
@@ -16,12 +17,12 @@ class QuoteScreen extends StatelessWidget {
           children: [
             InkWell(
               onTap: () => Constants.showToast(
-                context: context,
                 msg: 'Quote Error',
                 color: Colors.red,
               ),
               child: Image.asset(
                 ImgAssets.logo,
+                width: context.width,
               ),
             ),
           ],

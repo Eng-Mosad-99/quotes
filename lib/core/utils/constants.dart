@@ -38,7 +38,6 @@ class Constants {
   }
 
   static void showToast({
-    required BuildContext context,
     required String msg,
     Color? color,
     ToastGravity? gravity,
