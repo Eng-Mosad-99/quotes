@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quetes/config/routes/app_routes.dart';
 import 'package:quetes/core/utils/app_strings.dart';
 import 'package:quetes/core/utils/hex_color.dart';
 import 'package:quetes/features/random_quote/presentation/screens/quote_screen.dart';
@@ -15,6 +16,7 @@ class QuoteApp extends StatelessWidget {
       title: AppStrings.appName,
       theme: appTheme(),
       home: const QuoteScreen(),
+      onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
 }

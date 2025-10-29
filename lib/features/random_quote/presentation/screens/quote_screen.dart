@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quetes/config/routes/app_routes.dart';
 import 'package:quetes/core/utils/image_manager.dart';
 
 class QuoteScreen extends StatelessWidget {
@@ -12,12 +13,15 @@ class QuoteScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(ImgAssets.logo),
-            const Text(
-              'Quote',
-              style: TextStyle(
-                fontSize: 25,
-                color: Colors.black,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  Routes.favouriteQuoteScreenRoute,
+                );
+              },
+              child: Image.asset(
+                ImgAssets.logo,
               ),
             ),
           ],
