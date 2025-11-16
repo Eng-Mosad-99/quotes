@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quetes/core/utils/hex_color.dart';
 
 class AppColors {
-  static const Color primary = Colors.blue;
+  static  Color primary = HexColor('#202053');
   static const Color hint = Colors.grey;
 }

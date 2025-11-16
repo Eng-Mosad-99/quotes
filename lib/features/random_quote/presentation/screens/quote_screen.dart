@@ -1,33 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:quetes/config/routes/app_routes.dart';
-import 'package:quetes/core/utils/constants.dart';
-import 'package:quetes/core/utils/image_manager.dart';
-import 'package:quetes/core/utils/media_query_values.dart';
+import 'package:quetes/core/utils/app_strings.dart';
+import 'package:quetes/features/random_quote/presentation/widgets/quote_content.dart';
 
 class QuoteScreen extends StatelessWidget {
   const QuoteScreen({super.key});
+  Widget _buildBodyContent() {
+    return Column(
+      children: [
+        QuoteContent(),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
+    final appBar = AppBar(
+      title:  const Text(AppStrings.appName,),
+    );
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            InkWell(
-              onTap: () => Constants.showToast(
-                msg: 'Quote Error',
-                color: Colors.red,
-              ),
-              child: Image.asset(
-                ImgAssets.logo,
-                width: context.width,
-              ),
-            ),
-          ],
-        ),
-      ),
+      appBar: appBar,
+      body: _buildBodyContent(),
     );
   }
 }
