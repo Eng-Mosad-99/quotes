@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quetes/core/utils/app_colors.dart';
 
-import '../../../../core/utils/app_strings.dart';
 
 class QuoteContent extends StatelessWidget {
   const QuoteContent({super.key});
@@ -13,10 +12,10 @@ class QuoteContent extends StatelessWidget {
         horizontal: 20,
         vertical: 20,
       ),
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: AppColors.primary,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(30),
       ),
       child: Column(
         children: [
